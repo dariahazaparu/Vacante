@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_destination"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp">
+
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="369dp"
+
+        android:layout_height="50dp"
+        android:background="@drawable/bg_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="195dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/maldive"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loc"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/locationicon"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/iv_picture"
+        app:layout_constraintTop_toTopOf="@+id/location" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:src="@drawable/staricon"
+        app:layout_constraintBottom_toBottomOf="@+id/review"
+        app:layout_constraintEnd_toEndOf="@+id/loc"
+        app:layout_constraintStart_toStartOf="@+id/loc"
+        app:layout_constraintTop_toTopOf="@+id/review" />
+
+    <TextView
+        android:id="@+id/dest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top"
+        app:layout_constraintStart_toStartOf="@+id/iv_picture"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:text="destinatie" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="86dp"
+        android:layout_height="42dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loc"
+        app:layout_constraintTop_toTopOf="@+id/iv_picture"
+        tools:text="ocean" />
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="86dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_picture"
+        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        tools:text="5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
