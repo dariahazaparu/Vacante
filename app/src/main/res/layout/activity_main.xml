@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
 
 <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->
@@ -17,15 +18,24 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/textview" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.vacante.NavBar"
-        />
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/navbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:name="com.example.vacante.NavBar"-->
+<!--        />-->
+
+    <Button
+        android:id="@+id/sharebttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/sharebttn" />
+
 </LinearLayout>
