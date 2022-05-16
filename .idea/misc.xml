@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/bg_destination.xml" value="0.184" />
+        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/bg_top.xml" value="0.2115" />
         <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/dest_fragment.xml" value="0.18342391304347827" />
+        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/destination.xml" value="0.25" />
         <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/navbar.xml" value="0.18614130434782608" />
       </map>
     </option>
