@@ -2,4 +2,7 @@
     <string name="app_name">Vacante</string>
     <string name="textview">Hello World!</string>
     <string name="sharebttn">Share</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="vacation">Vacation</string>
 </resources>
