@@ -104,7 +104,7 @@ public class SignInActivity extends AppCompatActivity {
     private void checkUser() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser != null){
-            Log.d(TAG, "Alread logged in");
+            Log.d(TAG, "Already logged in");
             startActivity(new Intent(this, ProfileActivity.class));
             finish();
         }
