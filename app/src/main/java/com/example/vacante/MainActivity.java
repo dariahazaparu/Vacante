@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button captureImage = (Button)findViewById(R.id.captureimage);
+
+        captureImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CameraActivity.class));
+                //finish();
+            }
+        });
+
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
