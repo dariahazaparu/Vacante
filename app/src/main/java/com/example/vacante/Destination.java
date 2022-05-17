@@ -9,13 +9,7 @@ public class Destination implements Parcelable {
     private String Location;
     private Float Review;
     private Integer ImageId;
-
-    public Destination(String name, String location, Float review, Integer imageId) {
-        Name = name;
-        Location = location;
-        Review = review;
-        ImageId = imageId;
-    }
+    private String Description;
 
     public String getName() {
         return Name;
@@ -49,6 +43,22 @@ public class Destination implements Parcelable {
         ImageId = imageId;
     }
 
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public Destination(String name, String location, Float review, Integer imageId, String description) {
+        Name = name;
+        Location = location;
+        Review = review;
+        ImageId = imageId;
+        Description = description;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -70,7 +80,7 @@ public class Destination implements Parcelable {
     };
 
     public Destination(Parcel in) {
-        String[] data = new String[4];
+        String[] data = new String[5];
 
         in.readStringArray(data);
         // the order needs to be the same as in writeToParcel() method
@@ -78,5 +88,6 @@ public class Destination implements Parcelable {
         this.Location = data[1];
         this.Review = Float.valueOf(data[2]);
         this.ImageId = Integer.valueOf(data[3]);
+        this.Description = data[4];
     }
 }

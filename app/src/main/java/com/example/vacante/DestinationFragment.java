@@ -17,11 +17,11 @@ import java.util.List;
 
 public class DestinationFragment extends Fragment implements OnItemClickListener  {
 
-    private String DEST_NAME = "name";
-    private String DEST = "dest";
+    public static String DEST_NAME = "name";
+    public static String DEST = "dest";
 
     public static List<Destination> destList = new ArrayList<>();
-
+    public static CustomAdapter adapter;
     public DestinationFragment() {
         super(R.layout.dest_fragment);
     }
@@ -32,24 +32,29 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
         initiatize();
         ViewGroup viewGroup = (ViewGroup) view;
         int x = viewGroup.getChildCount();
-        CustomAdapter adapter = new CustomAdapter(destList, this);
+        adapter = new CustomAdapter(destList, this);
         RecyclerView rv = view.findViewById(R.id.recyclerView);
         rv.setAdapter(adapter);
     }
 
     private void initiatize() {
-        destList.add(new Destination(
-                "Maldive",
-                "Ocean",
-                4.5F,
-                R.drawable.maldive
-        ));
-        destList.add( new Destination(
-                "Madrid",
-                "Spain",
-                4.2F,
-                R.drawable.madrid
-        ));
+        if(destList.isEmpty()){
+
+            destList.add(new Destination(
+                    "Maldive",
+                    "Ocean",
+                    4.5F,
+                    R.drawable.maldive,
+                    "a"
+            ));
+            destList.add( new Destination(
+                    "Madrid",
+                    "Spain",
+                    4.2F,
+                    R.drawable.madrid,
+                    ""
+            ));
+        }
     }
 
 
@@ -61,12 +66,14 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//        SecondFragment secondFragment = new SecondFragment();
-//        secondFragment.setArguments(bundle);
-//        fragmentTransaction.replace(R.id.fragment_container, secondFragment)
-//                .addToBackStack(null);
+
+        DestinationExtendFragment secondFragment = new DestinationExtendFragment();
+        secondFragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.dest_fragment_container, secondFragment)
+                .addToBackStack(null);
 
         fragmentTransaction.commit();
     }
+
+
 }
