@@ -1,6 +1,9 @@
 package com.example.vacante;
 
+import static android.content.ContentValues.TAG;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -12,8 +15,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DestinationFragment extends Fragment implements OnItemClickListener  {
 
@@ -22,6 +32,8 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
 
     public static List<Destination> destList = new ArrayList<>();
     public static CustomAdapter adapter;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     public DestinationFragment() {
         super(R.layout.dest_fragment);
     }
@@ -39,6 +51,30 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
 
     private void initiatize() {
         if(destList.isEmpty()){
+
+            Map<String, Object> destination = new HashMap<>();
+            destination.put("name", "test");
+            destination.put("location", "test");
+            destination.put("review", 4.2F);
+            destination.put("id", "R.drawable.maldive");
+            destination.put("description", "R.drawable.test");
+
+
+// Add a new document with a generated ID
+            db.collection("destinations")
+                    .add(destination)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error adding document", e);
+                        }
+                    });
 
             destList.add(new Destination(
                     "Maldive",

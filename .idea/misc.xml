@@ -3,21 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/bg_destination.xml" value="0.184" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/bg_top.xml" value="0.2115" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/ic_location.xml" value="0.17" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/ic_plane.xml" value="0.2115" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/ic_search.xml" value="0.17" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/drawable/selector.xml" value="0.203" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/activity_destination.xml" value="0.1" />
         <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/dest_extend_fragment.xml" value="0.20416666666666666" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/dest_fragment.xml" value="0.18342391304347827" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/destination.xml" value="0.25" />
         <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/layout/navbar.xml" value="0.18614130434782608" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/menu/menu_nav.xml" value="0.20416666666666666" />
-        <entry key="..\:/Daria/fmi/anul 3/android/vacante/app/src/main/res/menu/search_dest_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante/app/src/main/res/layout/notification.xml" value="0.1" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/activity_camera.xml" value="0.12" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/activity_profile.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/dest_fragment.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/notification.xml" value="0.1" />
+        <entry key="..\:/Users/x/AndroidStudioProjects/Vacante1/app/src/main/res/layout/signin.xml" value="0.1" />
       </map>
     </option>
   </component>
