@@ -8,7 +8,6 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-
     <Button
         android:id="@+id/signin"
         android:layout_width="191dp"
@@ -19,6 +18,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/flFragment" />
+
+    <Button
+        android:id="@+id/captureimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/signin"
+        android:text="@string/show_view" />
 
     <FrameLayout
         android:id="@+id/flFragment"
@@ -41,4 +50,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_nav"
         tools:layout_editor_absoluteX="0dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

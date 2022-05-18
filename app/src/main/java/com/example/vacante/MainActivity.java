@@ -43,6 +43,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button captureImage = (Button)findViewById(R.id.captureimage);
+
+        captureImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CameraActivity.class));
+                //finish();
+            }
+        });
+
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.dest_fragment_container, DestinationFragment.class, null)
+                    .commit();
+        }
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.plane);
@@ -60,6 +78,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 }

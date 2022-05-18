@@ -12,4 +12,7 @@
     <string name="logout">Logout</string>
     <string name="go_to_sign_in">Go to Sign In</string>
     <string name="share_destination">share destination</string>
+    <string name="preview_area">Preview Area</string>
+    <string name="capture">Capture</string>
+    <string name="show_view">Take a pic of your fave view!</string>
 </resources>
