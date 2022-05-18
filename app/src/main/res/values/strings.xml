@@ -11,4 +11,5 @@
     <string name="email">Email</string>
     <string name="logout">Logout</string>
     <string name="go_to_sign_in">Go to Sign In</string>
+    <string name="share_destination">share destination</string>
 </resources>
