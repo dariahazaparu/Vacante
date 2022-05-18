@@ -45,10 +45,24 @@ public class MainActivity extends AppCompatActivity {
 
         Button captureImage = (Button)findViewById(R.id.captureimage);
 
+//        ObjectAnimator objectAnimator1 = ObjectAnimator.ofFloat(captureImage, "alpha", 0, 1).setDuration(2000);
+//        objectAnimator.setTarget(captureImage);
+//        objectAnimator.start();
+
         captureImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CameraActivity.class));
+                //finish();
+            }
+        });
+
+        Button animation = (Button)findViewById(R.id.animation);
+
+        animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MotionLayoutActivity.class));
                 //finish();
             }
         });
