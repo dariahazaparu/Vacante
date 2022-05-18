@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+//import com.google.firebase.firestore.DocumentReference;
+//import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,11 +28,13 @@ import java.util.Map;
 public class DestinationFragment extends Fragment implements OnItemClickListener  {
 
     public static String DEST_NAME = "name";
+    public static String DEST_DESC = "description";
+    public static String DEST_IMAGE = "image";
     public static String DEST = "dest";
 
     public static List<Destination> destList = new ArrayList<>();
     public static CustomAdapter adapter;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public DestinationFragment() {
         super(R.layout.dest_fragment);
@@ -52,43 +54,43 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
     private void initiatize() {
         if(destList.isEmpty()){
 
-            Map<String, Object> destination = new HashMap<>();
-            destination.put("name", "test");
-            destination.put("location", "test");
-            destination.put("review", 4.2F);
-            destination.put("id", "R.drawable.maldive");
-            destination.put("description", "R.drawable.test");
+//            Map<String, Object> destination = new HashMap<>();
+//            destination.put("name", "test");
+//            destination.put("location", "test");
+//            destination.put("review", 4.2F);
+//            destination.put("id", "R.drawable.maldive");
+//            destination.put("description", "R.drawable.test");
 
 
 // Add a new document with a generated ID
-            db.collection("destinations")
-                    .add(destination)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w(TAG, "Error adding document", e);
-                        }
-                    });
+//            db.collection("destinations")
+//                    .add(destination)
+//                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//                        @Override
+//                        public void onSuccess(DocumentReference documentReference) {
+//                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+//                        }
+//                    })
+//                    .addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            Log.w(TAG, "Error adding document", e);
+//                        }
+//                    });
 
             destList.add(new Destination(
                     "Maldive",
                     "Ocean",
                     4.5F,
                     R.drawable.maldive,
-                    "a"
+                    "Maldive sau Insulele Maldive, oficial Republica Maldive, este o țară insulară formată dintr-un grup de atoli din Oceanul Indian, situat sud-vest de India în Marea Laccadivelor din Oceanul Indian ."
             ));
             destList.add( new Destination(
                     "Madrid",
                     "Spain",
                     4.2F,
                     R.drawable.madrid,
-                    ""
+                    "Madrid este capitala Spaniei. Construit pe ruinele unui fort maur numit Magerit, orașul a devenit capitală în 1561, în timpul domniei lui Filip al II-lea de Habsburg. Ca urmare Madrid a devenit un oraș înfloritor."
             ));
         }
     }
@@ -98,6 +100,8 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
     public void onItemClick(Destination item) {
         Bundle bundle = new Bundle();
         bundle.putString(DEST_NAME, item.getName());
+        bundle.putString(DEST_DESC, item.getDescription());
+        bundle.putString(DEST_IMAGE, item.getImageId().toString());
         bundle.putParcelable(DEST, item);
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

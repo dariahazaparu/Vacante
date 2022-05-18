@@ -3,6 +3,7 @@ package com.example.vacante;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,22 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Button btn = (Button)findViewById(R.id.sharebttn);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-                sendIntent.setType("text/plain");
-
-                Intent shareIntent = Intent.createChooser(sendIntent, null);
-                startActivity(shareIntent);
-            }
-        });
-
         Button signin = (Button)findViewById(R.id.signin);
+
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(signin, "alpha", 0, 1).setDuration(2000);
+        objectAnimator.setTarget(signin);
+        objectAnimator.start();
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
