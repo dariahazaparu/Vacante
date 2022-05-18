@@ -53,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .setReorderingAllowed(true)
-                    .add(R.id.dest_fragment_container, DestinationFragment.class, null)
-                    .commit();
-        }
+//        if(savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .setReorderingAllowed(true)
+//                    .add(R.id.dest_fragment_container, DestinationFragment.class, null)
+//                    .commit();
+//        }
 
 
 

@@ -33,6 +33,14 @@ public class DestinationExtendFragment extends Fragment {
 
             Destination dest = bundle.getParcelable(DestinationFragment.DEST);
         }
+
+//        view.findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                createNotif();
+//            }
+//        });
+
         view.findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,5 +54,9 @@ public class DestinationExtendFragment extends Fragment {
                 startActivity(shareIntent);
             }
         });
+    }
+
+    public void createNotif() {
+
     }
 }

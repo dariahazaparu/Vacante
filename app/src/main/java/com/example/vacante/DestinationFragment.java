@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 //import com.google.firebase.firestore.DocumentReference;
 //import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -34,7 +36,7 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
 
     public static List<Destination> destList = new ArrayList<>();
     public static CustomAdapter adapter;
-//    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public DestinationFragment() {
         super(R.layout.dest_fragment);
@@ -54,29 +56,29 @@ public class DestinationFragment extends Fragment implements OnItemClickListener
     private void initiatize() {
         if(destList.isEmpty()){
 
-//            Map<String, Object> destination = new HashMap<>();
-//            destination.put("name", "test");
-//            destination.put("location", "test");
-//            destination.put("review", 4.2F);
-//            destination.put("id", "R.drawable.maldive");
-//            destination.put("description", "R.drawable.test");
+            Map<String, Object> destination = new HashMap<>();
+            destination.put("name", "test");
+            destination.put("location", "test");
+            destination.put("review", 4.2F);
+            destination.put("id", "R.drawable.maldive");
+            destination.put("description", "R.drawable.test");
 
 
-// Add a new document with a generated ID
-//            db.collection("destinations")
-//                    .add(destination)
-//                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-//                        @Override
-//                        public void onSuccess(DocumentReference documentReference) {
-//                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Log.w(TAG, "Error adding document", e);
-//                        }
-//                    });
+ //Add a new document with a generated ID
+            db.collection("destinations")
+                    .add(destination)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error adding document", e);
+                        }
+                    });
 
             destList.add(new Destination(
                     "Maldive",
